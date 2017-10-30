@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "serve": "concurrently \"dotnet run\" \"ng serve --proxy-config proxy.conf.json\"",
+    "build": "ng build -op wwwroot & dotnet build",
+    "build:prod": "ng build --prod -op wwwroot & cd .. & dotnet publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
