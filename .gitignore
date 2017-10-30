@@ -1,7 +1,11 @@
 # common
 .idea
+node_modules
 
 # dotnet
 bin
 obj
+wwwroot
 
+# Angular
+dist
